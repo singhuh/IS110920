@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e28f1fa00aec489497a45e38aa1183e3" Name="Diagram1">
+        <EntityTypeShape EntityType="ISDBModel.Company" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISDBModel.Interview" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISDBModel.StudentAlum" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISDBModel.Title" Width="1.5" PointX="3.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISDBModel.WorkHistory" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="ISDBModel.FK_dbo_WorkHistory_dbo_Company_CompanyId" ManuallyRouted="false" />
+        <AssociationConnector Association="ISDBModel.FK_dbo_Interview_dbo_StudentAlum_MNumber" ManuallyRouted="false" />
+        <AssociationConnector Association="ISDBModel.FK_dbo_WorkHistory_dbo_StudentAlum_MNumber" ManuallyRouted="false" />
+        <AssociationConnector Association="ISDBModel.FK_dbo_WorkHistory_dbo_Title_TitleId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

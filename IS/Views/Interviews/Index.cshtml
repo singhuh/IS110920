@@ -1,0 +1,52 @@
+﻿@model IEnumerable<IS.Models.Interview>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Interviews List</h2>
+
+<p>
+	@Html.ActionLink("Add", "Create", routeValues: null, htmlAttributes: new { @class = "btn btn-danger btn-justified ", @role = "button" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InterviewCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterviewDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Offer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentAlum.LastName)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterviewCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterviewDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Offer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentAlum.LastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InterviewId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InterviewId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InterviewId })
+        </td>
+    </tr>
+}
+
+</table>
