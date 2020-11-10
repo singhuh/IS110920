@@ -16,7 +16,19 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<script scr ="https://fonts.googleapis.com/css?family=Bowlby+One+SC"></script>
+
+	h1 {
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 25.5vw;
+	}
+
+
+
+
 	<style>
+
 		input[type=button], input[type=submit], input[type=reset] {
 			background-color: ThreeDShadow;
 			border: none;
@@ -26,8 +38,39 @@
 			margin: 4px 2px;
 			cursor: pointer;
 		}
-	</style>
 
+		.btn-group button {
+			background-color: #4CAF50; /* Green background */
+			border: 1px solid green; /* Green border */
+			color: white; /* White text */
+			padding: 10px 24px; /* Some padding */
+			cursor: pointer; /* Pointer/hand icon */
+			float: left; /* Float the buttons side by side */
+		}
+
+		/* Clear floats (clearfix hack) */
+		.btn-group:after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		.btn-group button:not(:last-child) {
+			border-right: none; /* Prevent double borders */
+		}
+
+		/* Add a background color on hover */
+		.btn-group button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			color: lightgrey;
+		}
+	</style>
 
 </head>
 <body>
@@ -42,6 +85,7 @@
 				@Html.ActionLink("MSIS Program", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
 			</div>
 			<div class="navbar-collapse collapse">
+			<div class="btn-group-justified">
 				<ul class="nav navbar-nav">
 					<li>@Html.ActionLink("Students & Alumni", "Index", "StudentAlums")</li>
 					<li>@Html.ActionLink("Titles", "Index", "Titles")</li>
